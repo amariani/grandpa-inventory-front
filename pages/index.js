@@ -5,9 +5,10 @@ export default function Home({ products }) {
   return (
     <div className="container">
       <h2>This is our home page</h2>
-      {products.map((p) => {
-        return <Card key={p.id} {...p} />;
-      })}
+      {products.length > 0 &&
+        products.map((p) => {
+          return <Card key={p.id} {...p} />;
+        })}
     </div>
   );
 }
