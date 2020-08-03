@@ -150,13 +150,6 @@ const GlobalStyles = () => (
       [hidden] {
         display: none;
       }
-
-      .container {
-        max-width: 960px;
-        width: 100%100%;
-        margin: 0 auto;
-        padding: 30px;
-      }
     `}
   />
 );

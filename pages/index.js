@@ -1,15 +1,16 @@
 import fetch from 'isomorphic-unfetch';
 import Card from '../components/Card';
+import { Flex, Box } from 'reflexbox';
 
 export default function Home({ products }) {
   return (
-    <div className="container">
-      <h2>This is our home page</h2>
+    <Box variant="container">
+      <h2>Listado de Productos</h2>
       {products.length > 0 &&
         products.map((p) => {
           return <Card key={p.id} {...p} />;
         })}
-    </div>
+    </Box>
   );
 }
 

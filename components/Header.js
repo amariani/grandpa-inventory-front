@@ -15,14 +15,15 @@ function Header({ isDark }) {
 }
 
 const HeaderStyled = styled.header`
-  background: ${(props) =>
-    props.isDark ? props.theme.colors.primary : props.theme.colors.secondary};
+  background: ${(props) => {
+    console.log(props.theme);
+    return props.theme.colors.azul;
+  }};
   padding: 20px;
   .logo {
     display: flex;
     align-items: center;
     .logo-text {
-      color: #333;
       font-weight: bold;
       font-size: ${rem(20)};
       margin-left: 20px;
