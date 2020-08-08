@@ -1,24 +1,22 @@
 import styled from '@emotion/styled';
 import { rem } from 'polished';
+import { Box } from 'reflexbox';
 
-function Header({ isDark }) {
+function Header() {
   return (
-    <HeaderStyled isDark={isDark}>
-      <div className="container">
+    <HeaderStyled>
+      <Box variant="container">
         <div className="logo">
           <img src="/images/inventory-logo.png" alt="Logo" />
           <span className="logo-text">Grandpa Inventory</span>
         </div>
-      </div>
+      </Box>
     </HeaderStyled>
   );
 }
 
 const HeaderStyled = styled.header`
-  background: ${(props) => {
-    console.log(props.theme);
-    return props.theme.colors.azul;
-  }};
+  background: ${(props) => props.theme.colors.primary};
   padding: 20px;
   .logo {
     display: flex;

@@ -1,3 +1,6 @@
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core';
+
 export default function Picture({ images }) {
   const {
     formats: {
@@ -6,5 +9,13 @@ export default function Picture({ images }) {
     name,
   } = images[0];
 
-  return <img src={imageUrl} alt={name} />;
+  return (
+    <img
+      src={imageUrl}
+      alt={name}
+      css={css`
+        width: 100%;
+      `}
+    />
+  );
 }

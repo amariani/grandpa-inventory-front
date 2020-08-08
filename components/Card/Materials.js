@@ -1,9 +1,13 @@
-import { Box } from 'reflexbox';
+import { Box, Flex } from 'reflexbox';
 
 export default function Materials({ materials }) {
-  return materials.map(({ name }) => (
-    <Box variant="inlineBadge" as="p" bg="secondary">
-      {name}
-    </Box>
-  ));
+  return (
+    <Flex flexWrap="wrap">
+      {materials.map(({ id, name }) => (
+        <Box key={id} variant="inlineBadge" as="span" fontSize=".7em">
+          {name}
+        </Box>
+      ))}
+    </Flex>
+  );
 }
